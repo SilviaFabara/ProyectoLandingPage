@@ -1,0 +1,524 @@
+/* Media query para teléfonos móviles */
+@media only screen and (max-width: 320px) {
+    /* Ajustes de estilo para teléfonos móviles */
+    body{
+        margin: 0;
+        padding: 0;
+        height:auto;
+        width:100vw;
+        background-color: white;
+        display: grid;
+        grid-template-columns: 100vw;
+        grid-template-rows: 125vh 110vh 110vh 170vh 150vh 120vh;
+        grid-template-areas:  
+                              'header'
+                              'ventas'
+                              'rentas'
+                              "desarrollos"
+                              "servicios"
+                              "footer" ;
+        row-gap: 1%;
+        z-index: 1;
+        overflow-x: hidden;
+    }
+
+    header .redes{
+        display: none;
+    }
+
+    header{
+      position: relative;
+      padding-top: 3%;
+        grid-area: header;
+          background: linear-gradient(171deg, #03040edd 0%, #3039e400 100%) , url(/img/headerMovil.png);
+          background-size:cover;
+          height: 100%;
+          background-repeat: repeat;
+          position: relative;
+          top: 0%;
+          bottom: 0%;
+          left: 0%;
+          right: 0%;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          grid-template-rows: 11% 17% auto 11%;
+          grid-template-areas:  "logo sesion"
+                                "buscador buscador"
+                                "titulo titulo"
+                                "desplazador desplazador";                         
+         
+      }
+      .logo{
+        display: none;
+      }
+
+
+      .navPrincipal li:nth-child(-n+5) ,
+      .navPrincipal hr
+     {
+        display: none;
+      }
+
+     header nav{
+        display: flex;
+        grid-area: sesion;
+        justify-content: center;
+        align-items: center;
+        border-bottom:none;
+      }
+
+      .navPrincipal {
+        
+        margin-right: 0;
+        margin-top: 8%;
+        
+    }
+      .logoMovil{
+        display: flex;
+        justify-self: start;
+        align-self: center;
+        padding-left: 20%;
+        grid-area: logo;
+      }
+
+      .barrita {
+        display: block;
+        justify-self: end;
+
+      }
+
+      .buscador{
+        justify-self: center;
+        margin-top: 4%;
+      }
+
+      .buscador input{
+        margin: 0;
+        text-align: left;
+        flex-direction: column;
+        font-size: 80%;
+      }
+
+      .titulo{
+  
+        padding: 0;
+        justify-content: end;
+        
+      }
+
+      .titulo h2{
+        font-size: 200%;
+        padding-left: 0;
+        justify-self: left;
+      }
+      
+      .titulo h1{
+        font-size: 300%;
+        justify-self: left;
+      }
+
+      .titulo button{
+        padding-left: 3%;
+        flex-direction: row;
+        column-gap: 10%;
+        width: 90%;
+        align-self: center;
+        justify-content: start;
+        align-items: center;
+        margin: 0;
+        font-size: 100%;
+      }
+
+.ventas, .rentas, .desarrollos, .servicios{
+  padding-left: 0;
+  padding-right: 5%;
+}
+
+.descripVentas, .descripRentas,
+ .descripDesarrollos, .descripServicios{
+  padding-left: 0;
+  padding-right: 13%;
+ }
+
+.descripVentas::after,
+.descripRentas::after,
+.descripServicios::after{
+  content: url(/img/flechaMovil.png);
+  position: relative;
+  top: -50%;
+  left: 100%;
+  padding-left: 4%;
+}
+
+.imgVentas, .imgRentas{
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  align-items: center;
+  overflow: none;
+
+}
+
+#v2, #r1{
+  grid-column: 1/2;
+  width: 100%;
+}
+
+#v3, #r2{
+
+  grid-column: 2/-1;
+
+}
+
+
+#v1, #r3{
+
+    display: none;
+
+
+}
+
+
+
+
+.cuadro{
+  height: 100%;
+  width: max-content;
+}
+
+
+ 
+ h2{
+  font-size: 150%;
+ }
+
+ h3{
+  font-size: 200%;
+ }
+ .ventas h2, .ventas h3,
+ .rentas h2, .rentas h3,
+ .desarrollos h2, .desarrollos h3,
+ .servicios h2, .servicios h3 {
+   text-align: left;
+   line-height: 150%;
+ }
+
+
+
+.opciones{
+  display: flex;
+}
+
+.opciones, .descripVentas .opciones{
+  padding: 0;
+}
+.opciones a:first-child,
+.opciones a:last-child{
+  display: none;
+}
+
+.opciones a:nth-child(2){
+  display: flex;
+color: #DF991B;
+font-family: Brandon Grotesque;
+font-size: 120%;
+font-style: normal;
+font-weight: 390;
+line-height: 45px; /* 180% */
+border: 0;
+padding: 0;
+width: 100%;
+}
+
+
+.ventas{
+  display: flex;
+  flex-direction: column-reverse;
+  row-gap: 3%;
+}
+.ventas p, .rentas p, .servicios p{
+  text-align: justify;
+  font-size: 130%;
+  line-height: 130%;
+
+}
+.ventas p{
+  display: block;
+}
+
+
+.rentas{
+  display: flex;
+  flex-direction: column;
+  row-gap: 3%;
+}
+
+.desarrollos{
+  grid-template-rows: 0.2fr 3fr;
+  padding-right: 0;
+}
+
+.imgDesarrollos{
+  padding: 0;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
+  grid-template-areas: none;
+  row-gap: 2%;
+} 
+
+
+#d1, #d2, #d3, #d4, #d5, #d6, #d7, #d8{
+
+  display: none;
+
+}
+
+
+#d9{
+  background: url(/img/D9.png), lightgray ;
+  background-size: cover;
+  background-repeat: no-repeat;
+  grid-row: 1/2;
+
+}
+
+
+
+
+#d10{
+  background: url(/img/D10.png), lightgray ;
+  background-size: cover;
+  background-repeat: no-repeat;
+  grid-row: 2/3;
+
+}
+
+#d11{
+
+  background: url(/img/D11.png), lightgray ;
+  background-size: cover;
+  background-repeat: no-repeat;
+  grid-row: 3/-1;
+}
+
+
+#d9, #d10, #d11{
+
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+
+}
+
+#d9 p, #d10 p, #d11 p{
+  color: white;
+
+}
+
+.tag{
+  grid-row: 1/2;
+  background-color: transparent;
+}
+
+#d9:hover,
+#d10:hover,
+#d11:hover{
+
+  transform: scale(0.9);
+  border: 1px solid #000000;
+  transition: all 0.5s ease;
+
+}
+
+#d9:hover .tag ,
+#d10:hover .tag,
+#d11:hover .tag{
+
+  background-color: white;
+  grid-row: 3/-1;
+
+
+}
+
+#d9:hover p ,
+#d10:hover p,
+#d11:hover p{
+  color: black;
+
+
+}
+
+
+
+.servicios{
+  display: flex;
+  flex-direction: column-reverse;
+  row-gap: 3%;
+}
+
+.servicios .redes{
+  position: relative;
+  top: 97%;
+  right: 20%;
+  display: flex;
+  transform: scale(0.5) rotate(-90deg)
+
+}
+
+.redes li{
+  transform: rotate(90deg);
+}
+
+.servicios .redes hr{
+  display: none;
+}
+
+.servicios .redes p{
+  display: none;
+}
+
+
+.imgServicios{
+  margin-left: 0;
+  margin-right: 30%;
+}
+
+.imgServicios img{
+  width: 130%;
+}
+
+
+
+.circulo-movil{
+
+  padding: 4%;
+  border-radius: 50%;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #DF991B  #DF991B   #DF991B transparent;
+
+
+
+}
+
+.linea{
+  width: 130%;
+}
+
+.subscripcion{
+  display: flex;
+  flex-direction: column;
+  row-gap: 10%;
+  bottom: 30%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  height: 100%;
+  
+
+}
+
+.subscripcion div form{
+  align-items: end;
+  row-gap: 5%;
+  width: 100%;
+}
+
+.subscripcion div:nth-child(2){
+  display: flex;
+  justify-self: end;
+  width: 100%;
+}
+
+.subscripcion div p:nth-child(1) {
+  font-size: 130%;
+}
+
+.subscripcion div p:nth-child(2) {
+  font-size: 200%;
+  line-height: 90%;
+}
+
+.subscripcion div p:nth-child(2) br{
+  display: none;
+}
+
+.subscripcion form label{
+  line-height: 110%;
+  font-size: 130%;
+  align-self: flex-start;
+  justify-self: left;
+  
+}
+
+.subscripcion form input{
+  padding-left: 0;
+  text-align: center;
+  font-size: 100%;
+  line-height: 100%;
+  align-self: center;
+  justify-self: left;
+  height: 80%;
+  width: 100%;
+}
+
+.subscripcion form button{
+  align-self: center;
+  justify-self: left;
+  height: 100%;
+  line-height: 90%;
+  padding-top: 8%;
+  padding-bottom:8%;
+}
+
+footer{
+  margin-top: 10%;
+  width: 100%;
+  grid-template-rows: 1fr 1fr 0.5fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  height: 100%;
+
+}
+
+.moreinfo{
+  grid-row: 2/3;
+  grid-column: 1/-1;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+.moreinfo a{
+  font-size: 100%;
+  line-height: 140%;
+
+}
+
+.moreinfo div:nth-child(1){
+  grid-column: 1/-1;
+}
+
+.autor{
+  grid-row: 3/-1;
+}
+
+
+
+
+.moreinfo div:nth-child(2){
+  grid-row: 2/3;
+  grid-column: 1/2;
+}
+
+.moreinfo div:nth-child(3){
+  grid-row: 2/3;
+  grid-column: 2/3;
+}
+
+.moreinfo div:nth-child(4) {
+  grid-row: 3/4;
+  grid-column: 1/-1;
+  display: flex;
+  justify-content:start;
+}
+
+
+
+}
