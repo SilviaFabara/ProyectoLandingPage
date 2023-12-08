@@ -30,7 +30,7 @@
       position: relative;
       padding-top: 3%;
         grid-area: header;
-          background: linear-gradient(171deg, #03040edd 0%, #3039e400 100%) , url(/img/headerMovil.png);
+          background: linear-gradient(171deg, #03040edd 0%, #3039e400 100%) , url(../img/headerMovil.png);
           background-size:cover;
           height: 100%;
           background-repeat: repeat;
@@ -143,7 +143,7 @@
 .descripVentas::after,
 .descripRentas::after,
 .descripServicios::after{
-  content: url(/img/flechaMovil.png);
+  content: url(../img/flechaMovil.png);
   position: relative;
   top: -50%;
   left: 100%;
@@ -275,7 +275,7 @@ width: 100%;
 
 
 #d9{
-  background: url(/img/D9.png), lightgray ;
+  background: url(../img/D9.png), lightgray ;
   background-size: cover;
   background-repeat: no-repeat;
   grid-row: 1/2;
@@ -286,7 +286,7 @@ width: 100%;
 
 
 #d10{
-  background: url(/img/D10.png), lightgray ;
+  background: url(../img/D10.png), lightgray ;
   background-size: cover;
   background-repeat: no-repeat;
   grid-row: 2/3;
@@ -295,7 +295,7 @@ width: 100%;
 
 #d11{
 
-  background: url(/img/D11.png), lightgray ;
+  background: url(../img/D11.png), lightgray ;
   background-size: cover;
   background-repeat: no-repeat;
   grid-row: 3/-1;
