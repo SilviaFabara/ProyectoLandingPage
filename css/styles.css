@@ -577,7 +577,7 @@ h3{
 #d7:hover,
 #d8:hover{
 
-  transform: scale(0.8);
+  transform: scale(1.1);
   border: 1px solid #000000;
   transition: all 0.5s ease;
 
